@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Clinic.iml" filepath="$PROJECT_DIR$/Clinic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clinic-backend/clinic-backend.iml" filepath="$PROJECT_DIR$/clinic-backend/clinic-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clinic-server/clinic-server.iml" filepath="$PROJECT_DIR$/clinic-server/clinic-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clinic-web/clinic-web.iml" filepath="$PROJECT_DIR$/clinic-web/clinic-web.iml" />
+    </modules>
+  </component>
+</project>

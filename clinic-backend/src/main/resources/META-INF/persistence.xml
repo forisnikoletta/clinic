@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- use version 2.1 of JPA -->
+<persistence version="2.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                        http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+<!--    &lt;!&ndash; one persistence unit = we connect to one data source &ndash;&gt;
+    &lt;!&ndash; "RESOURCE_LOCAL" = locally defined data source, Java SE style &ndash;&gt;
+    <persistence-unit name="clinicPuLocal" transaction-type="RESOURCE_LOCAL">
+
+        &lt;!&ndash; list of classes we want to manage with JPA &ndash;&gt;
+        <class>edu.wk.clinic.model.User</class>
+        <class>edu.wk.clinic.model.model.Consultation</class>
+
+
+
+        &lt;!&ndash; configs of JPA, like driver class, server URL and credentials &ndash;&gt;
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:blog;DB_CLOSE_DELAY=-1" />
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+
+    </persistence-unit>-->
+    
+    
+    <!-- second, JTA based persistence unit -->
+    <persistence-unit name="clinicPu" transaction-type="JTA">
+    
+    	<!-- the JNDI name of the data source for this persistence unit -->
+    	<!-- it's defined in a "-ds.xml" file next to this one -->
+        <jta-data-source>java:jboss/datasources/clinicDS</jta-data-source>
+		
+        <!-- list of classes we want to manage with JPA -->
+        <class>edu.wk.clinic.model.Consultation</class>
+        <class>edu.wk.clinic.model.User</class>
+        <class>edu.wk.clinic.model.Sickness</class>
+        <class>edu.wk.clinic.model.State</class>
+        <class>edu.wk.clinic.model.Disease</class>
+
+
+        <!-- only custom configs of jpa -->
+        <properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+        </properties>
+
+    </persistence-unit>
+</persistence>

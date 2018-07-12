@@ -1,0 +1,7 @@
+* Én mint orvos, szereték új kórlapokat feltölteni, úgy hogy megadom a betegségeket és a diagnózis felállításának idejét.
+* Én mint orvos, szeretném a konzultáció állapotat eléhetővé tenni.
+
+* Én mint beteg-felhasználó, meg szeretném nézni az eddigi konzultációimat.
+* Én mint beteg-felhasználó, szeretném, hogy a megadott időn belül diagnózist kapjak.
+* Én mint beteg-felhasználó, fel akarom tölteni a tüneteim úgy, hogy a lehetséges betegségeket egy listából kiválasztom.
+

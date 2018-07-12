@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="clinic-server:ear exploded">
+    <output-path>$PROJECT_DIR$/clinic-server/target/clinic-server</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="clinic-server/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/clinic-server/target/clinic-server/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="archive" name="clinic-backend-1.0.0-SNAPSHOT.jar">
+        <element id="artifact" artifact-name="clinic-backend:ejb exploded" />
+      </element>
+      <element id="archive" name="clinic-web-1.0.0-SNAPSHOT.war">
+        <element id="artifact" artifact-name="clinic-web:war exploded" />
+      </element>
+    </root>
+  </artifact>
+</component>
